@@ -1,0 +1,18 @@
+{
+    "name": "markus/login",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Markus\\Login\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Markus",
+            "email": "abramianmedina@gmail.com"
+        }
+    ]
+}
