@@ -1,5 +1,5 @@
 <?php
-$connection = 'mysql:dbname=users;host=localhost';
+$connection = 'mysql:dbname=access;host=localhost';
 $userDB = 'root';
 $pwDB = '';
 try {

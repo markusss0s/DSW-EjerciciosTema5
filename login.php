@@ -1,10 +1,10 @@
 <?php
 if (isset($_POST['username'], $_POST['pass'])) {
-  $username = $_POST['username'];
+  $name = $_POST['username'];
   $pass = $_POST['pass'];
   require 'connection.php';
-  $stmt = $pdo->prepare('SELECT * FROM access WHERE name=:name AND pass=:pass AND validate');
-  $stmt->execute([':name' => $username, ':pass' => $pass]);
+  $stmt = $pdo->prepare('SELECT * FROM users WHERE name=:name AND password=:password AND validate');
+  $stmt->execute([':name' => $name, ':password' => $pass]);
   if ($user = $stmt->fetch(PDO::FETCH_OBJ)) {
     session_start();
     $_SESSION['username'] = $user->name;
